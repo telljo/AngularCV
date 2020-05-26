@@ -1,0 +1,30 @@
+[debug] [2019-08-29T10:41:32.210Z] ----------------------------------------------------------------------
+[debug] [2019-08-29T10:41:32.213Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Josh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:joshtell
+[debug] [2019-08-29T10:41:32.213Z] CLI Version:   7.3.0
+[debug] [2019-08-29T10:41:32.213Z] Platform:      win32
+[debug] [2019-08-29T10:41:32.213Z] Node Version:  v10.16.0
+[debug] [2019-08-29T10:41:32.214Z] Time:          Thu Aug 29 2019 22:41:32 GMT+1200 (New Zealand Standard Time)
+[debug] [2019-08-29T10:41:32.214Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-29T10:41:32.223Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-29T10:41:32.224Z] > authorizing via signed-in user
+[debug] [2019-08-29T10:41:32.224Z] [iam] checking project angularcv-51d60 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-29T10:41:32.226Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/angularcv-51d60:testIamPermissions  
+
+[debug] [2019-08-29T10:41:33.711Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-29T10:41:33.713Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/angularcv-51d60  
+ 
+[debug] [2019-08-29T10:41:34.364Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'angularcv-51d60'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/angularcv-51d60/overview
+[debug] [2019-08-29T10:41:34.747Z] TypeError: Cannot read property 'deploys' of undefined
+    at C:\Users\Josh\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
