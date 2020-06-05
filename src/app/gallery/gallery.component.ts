@@ -75,7 +75,7 @@ export class GalleryComponent implements OnInit {
     },
       20);
 
-    this.router.navigate(['./pages/' + pageDestination]);
+    this.router.navigate([pageDestination]);
   }
 
   prepareRoute(outlet: RouterOutlet) {

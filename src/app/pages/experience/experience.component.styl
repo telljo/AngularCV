@@ -28,12 +28,12 @@ body {
 
 .intro {
   background: #2A4494
-  height 721px;
+  height 750px;
   padding-top 60px
 }
 
 #container 
-  margin-top 170px
+  margin-top 190px
 
 #secondintro {
   padding-top 100px
@@ -74,8 +74,12 @@ p
   font-size: 20px;
   color white
   line-height: 1.5;
-  text-align: justify;
+  text-align: left;
   text-justify: auto;
+
+.introText
+  text-align justify
+  text-justify auto
 
 .inText
   font-family: 'ff-tisa-web-pro', serif;
@@ -191,7 +195,7 @@ header {
 	width: 100%;
 	margin-bottom: 70px;
 
-	&:nth-child(even) {
+	&:nth-child(odd) {
 
 		.timeline-content {
 			float: right;
@@ -215,7 +219,7 @@ header {
 			}
 		}
 	}
-  &:nth-child(odd) {
+  &:nth-child(even) {
 
 		.timeline-content {
 			float: left;
@@ -227,9 +231,9 @@ header {
 			}
 
 			&::after {
-				content: '';
+			content: '';
 		    position: absolute;
-	  	  border-style: solid;
+	  	  	border-style: solid;
 		    width: 0;
 		    height: 0;
 		    top: 30px;
@@ -334,7 +338,7 @@ header {
 }
 .timeline-item:nth-child(11) {
   .timeline-img-header {
-			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\dxc_logo.png') center center no-repeat;
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\Otago2.png') center center no-repeat;
 			background-size: contain;
 		}
 }
@@ -379,11 +383,11 @@ blockquote {
   transition: all .5s ease-in-out;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(even) {
   transform: translate3d(-200px, 0, 0);
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-child(odd) {
   transform: translate3d(200px, 0, 0);
 }
 

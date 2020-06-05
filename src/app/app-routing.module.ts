@@ -10,11 +10,11 @@ import { ExperienceComponent } from './pages/experience/experience.component'
 const routes: Routes = [
 
   {
-    path: 'pages',
+    path: '',
     component: PagesComponent,
     children: [
       {
-        path: 'home',
+        path: '',
         component: HomeComponent,
         data: { animation: 'Home' }
       },
@@ -35,14 +35,14 @@ const routes: Routes = [
       },
       {
         path:'',
-        redirectTo: 'home',
+        redirectTo: '',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: 'pages/home',
+    redirectTo: '',
     pathMatch: 'full'
   },
 ];
