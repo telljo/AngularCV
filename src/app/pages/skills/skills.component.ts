@@ -15,6 +15,8 @@ export class SkillsComponent implements OnInit {
   transform2 = 'translateY(20px)'
 
   transform3 = 'translateY(-100px)'
+  
+  transform4 = 'translateY(-100px)'
 
   ngOnInit() {
     this.loadScript();
@@ -27,13 +29,17 @@ export class SkillsComponent implements OnInit {
       'use strict';
     
       // define variables
-      var item = document.querySelector(".portfolio");     
+      //var item = document.querySelector(".portfolio");    
+      var items = [document.querySelector(".portfolio"), document.querySelector(".certificates")];
       
       setTimeout(function () {
         
-          if (isElementInViewport(item)) {
-            item.classList.add("in-view")
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            items[i].classList.add("in-view");
           }
+        }
+          
         
       }, 750); 
 
@@ -49,9 +55,11 @@ export class SkillsComponent implements OnInit {
       }
     
       function callbackFunc() {
-          if (isElementInViewport(item)) {
-            item.classList.add("in-view");
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            items[i].classList.add("in-view");
           }
+        }
       }
       // listen for events
       window.addEventListener("resize", callbackFunc);
