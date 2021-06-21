@@ -11,6 +11,9 @@ declare let Email: any;
 export class ContactComponent implements OnInit {
   constructor() {
    }
+
+  transform1 = 'translateY(-100px)'
+  transform2 = 'translateY(20px)'
   
   ngOnInit() {
   }
