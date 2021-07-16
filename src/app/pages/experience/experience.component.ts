@@ -11,38 +11,26 @@ import { takeWhile, scan, tap } from "rxjs/operators";
 export class ExperienceComponent implements OnInit {
 
   private birthdate: Date = new Date("1997-01-30");
+  private startDate: Date = new Date("2017-11-01");
   constructor() {}
 
-  public CalculateAge(): string {
+
+  public CalculateDifference(time: string): string {
     const today = new Date();
-    let age = today.getFullYear() - this.birthdate.getFullYear();
-    const m = today.getMonth() - this.birthdate.getMonth();
-    if(m<0 ||  (m===0 && today.getDate() < this.birthdate.getDate())){
-      age--;
+    let calcDate = new Date();
+    if(time==="age") calcDate = this.birthdate;
+    if(time==="experience") calcDate = this.startDate;
+    let difference = today.getFullYear() - calcDate.getFullYear();
+    const m = today.getMonth() - calcDate.getMonth();
+    if(m<0 ||  (m===0 && today.getDate() < calcDate.getDate())){
+      difference--;
     }
-    return age.toString();
+    return difference.toString();
   }
 
   ngOnInit() {
     this.loadScript();
   }
-  
-
-/*   scroll(el: HTMLElement) {
-
-
-      let scrollToElement = window.setInterval(() => {
-      let elRect = el.getBoundingClientRect();
-      let bodyRect = document.body.getBoundingClientRect();
-      let offset = elRect.top - bodyRect.top; 
-      let pos = window.pageYOffset;
-        if (pos <= offset) {
-          window.scrollTo(0, pos + 20); // how far to scroll on each step
-        } else {
-          window.clearInterval(scrollToElement);
-        }
-      }, 5);
-} */
 
   public loadScript() {        
 

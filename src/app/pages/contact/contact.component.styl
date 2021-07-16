@@ -2,16 +2,26 @@
     display flex
     flex-direction column
     margin auto
-    background-color white
+    background-color #3d87c4
     text-align center
     min-height 100%
 
-.abovesection
-    background-color lightgrey
+.main
     height 100vh-50px
     margin auto
+    margin-top 0px
     flex-direction column
     width 100%
+
+img 
+    border-radius 50%
+    width 200px
+    height 200px
+    margin-top 20px
+
+section 
+    margin-top 10px;
+
 
 .toptitle
     display flex
@@ -40,6 +50,73 @@
     transition transform 1s ease
     transition-delay 0.2s
     background-color white
-    height 400px
+    height 300px
     width 600px
     border-radius 4px
+
+
+.topsection
+    background-color #f7f7f7
+    width 100%
+    margin 0
+
+.contactlinks
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    width 100%
+    justify-content center
+
+.contactlink
+    display flex
+    flex-direction row
+    align-items center
+    padding 5px
+    margin-top 50px
+    height 100px
+    h3
+        text-align left
+        font-size 2rem
+        text-transform uppercase
+        padding 0
+        margin 0
+        margin-top 5px
+    p
+        text-align left
+        margin 0
+        padding 0
+
+.certLink
+    display block
+    position absolute
+    width 228.22px
+    height 100px
+
+.fa-contact
+    padding: 10px;
+    margin-right 10px;
+    font-size: 35px;
+    width: 50px;
+    height 50px;
+    background: url('src\assets\Images\graphic.png');  
+    background-size: 200px 200px;
+    background-position: top right;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color white
+
+.fa-contact.fa::before
+    display inline-block
+    width 35px
+    height 35px
+    vertical-align: middle
+    line-height: normal
+
+
+.fa-contact:hover 
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+
+         
