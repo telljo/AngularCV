@@ -21,7 +21,7 @@
     width 100%
 
 .bottompage
-    background-color #F0F0F0
+    background-color #e0e0e0 
     height 600px
     margin auto
     flex-direction column
@@ -49,9 +49,7 @@ p
 .bottomtitle2
     display flex
     justify-content center
-    margin-top 180px
-    transition transform 1s ease
-    transition-delay 0.2s
+    margin-top 80px
 
 .title
     font-family: 'deadjim', 'arial', sans-serif;  
@@ -68,6 +66,7 @@ p
     font-size 80px
     margin: 0px;
     color #0B4F6C
+    
 
 .technicalsection
     display flex
@@ -105,12 +104,6 @@ p
     padding 0
     border-radius 4px	
 
-.webLink
-    display block
-    position absolute
-    width 600px
-    height 300px
-
 .infoText
     margin auto
     margin-top 20px
@@ -126,10 +119,7 @@ p
     height 0%
     transition height 500ms
     p
-        font-size: 1rem;
         padding: 1rem 1.5rem;
-        font-weight: 800;
-        line-height: 1.8;
         text-align: center;
         color: #00343f;
         padding-top 40px
@@ -142,56 +132,52 @@ p
     height 100%
     p
         visibility: visible
+        color black
         opacity 1
 
 .certificates
     display flex
     margin auto
-    width 700px
+    height 350px
     flex-direction row
     justify-content space-between
 .certificate
     display flex
     flex-direction column
+    justify-content: space-between
     margin auto
-    margin-top 40px
     text-align center
     transition transform 1s ease
     transition-delay 0.2s
-    height 300px
+    height 350px
     width 300px
     border-radius 4px	 
     background-color white 
-    border 3px solid #F0F0F0 
 
 .certificate:hover
-    border 3px solid grey
+    opacity 0.5
 .certificate:nth-child(1)
     background: url('src\assets\Images\microsoft.png') center no-repeat;  
 
 .certificate:nth-child(2)
     background: url('src\assets\Images\azure-dev.jpeg') center no-repeat; 
 
-.certText
-    color #00343f
-    margin-top 10px
-
 .certLink
     display block
     width 300px
-    height 300px
+    height 350px
 
 .card:nth-child(1)
-    background: url('src\assets\Images\AngularCV2.png') center/contain no-repeat;
+    background: url('src\assets\Images\AngularCV2.png') top/contain no-repeat;
 
 .card:nth-child(2)
-    background: url('src\assets\Images\Squash.png') center/contain no-repeat;
+    background: url('src\assets\Images\Squash.png') top/contain no-repeat;
 
 .in-view
     transform translateY(-100px)
 
 .topsection
-    background-color #f7f7f7
+    background-color #e0e0e0 
     width 100%
     margin 0
     height 130px
@@ -203,11 +189,14 @@ p
     width 90%
     flex-direction column
     justify-content center
+    background-color white
 
 .bar 
     align-items flex-end
     background-color #eee
-    color: #666
+    color: #00343f
+    font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 500
     width 80%
     font-size 11pt
     height 28px
@@ -216,13 +205,14 @@ p
     display flex
     margin-bottom 15px
     margin-left 50px
+    background-color lightgrey
     flex-direction row
     justify-content space-between
 span 
     display initial  
     z-index 1
-    padding 0 10px 0 0
-    margin-bottom 5px
+    padding 0 5px 0 0
+    margin-bottom 4px
 
 .fill
     left: 0;
@@ -252,4 +242,52 @@ span
     font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 700;
 
+p
+  font-size: 18px;
+  color #00343f
+  line-height: 1.5;
+  text-align: center;
+  text-justify: auto;
+
+.certText
+    color #00343f
+    height 60px
+
+@media (max-width: 769px)
     
+    .technicalsection
+        width 85%
+    .flex
+        margin-left 0
+        margin-right 0
+        width 100%
+    .tag 
+        width 80px
+    span 
+        padding 0
+    .title
+        font-size 60px
+    .title2
+        font-size 60px
+    .portfolio
+        width 90%
+    .hiddenblock
+        margin-top 180px
+    .hiddenblock p
+        opacity 1
+        margin-top 10px
+        padding 0px
+        margin-bottom 10px
+    .card
+        margin-bottom 230px
+        height 200px
+    .card:nth-child(2)
+        margin-top 25px
+    .card:hover .hiddenblock
+        height 0%
+    .infoText
+        opacity 0
+    .belowsection
+        height 1050px
+    .certificates
+        margin-top 0px

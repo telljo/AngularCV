@@ -11,6 +11,12 @@
   box-sizing: border-box;
 }
 
+.main
+    margin auto
+    margin-top 0px
+    flex-direction column
+    width 100%
+
 .fa1
 
   width: 54px
@@ -29,9 +35,10 @@ body
   background: #2A4494
   height 750px
   padding-top 60px
+  width 100%
 
 #container 
-  margin-top 190px
+  margin-top 160px
 
 #secondintro
   padding-bottom 20px	
@@ -39,7 +46,6 @@ body
 
 .container {
   width: 90%;
-  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -58,6 +64,10 @@ h1 {
 h2
   color: #fff;
   font-size: 25px;
+  margin-bottom 5px
+
+footer h2
+  font-size 15px
 
 h3
     font-family: 'museo-sans', sans-serif;
@@ -67,21 +77,19 @@ h3
     color white
 
 p
-  font-family: 'ff-tisa-web-pro', serif;
-  font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   color white
   line-height: 1.5;
   text-align: left;
   text-justify: auto;
+	i
+		color #2A4494
 
 .introText
   text-align justify
   text-justify auto
 
 .inText
-  font-family: 'ff-tisa-web-pro', serif;
-  font-weight: 400;
   font-size: 20px;
   color white
   line-height: 1.5;
@@ -107,8 +115,8 @@ a:hover
     margin-top 20px
     color #1C448E
 
-#main 
-  width 1050px
+#top
+  width 70%
   margin auto
   margin-top 30px
   text-align: center
@@ -117,28 +125,19 @@ a:hover
   justify-content: space-evenly
 
 .breakLine
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 300px;
-    border: 0;
-    border-top: solid 5px;
-    border-color: #fff
-    text-align: center;
+	background-color: white;
+	max-width: 300px;
+	height: 5px;
 
 .breakLine2
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 540px;
-    border: 0;
-    border-top: solid 5px;
-    border-color: #6B9AC4
-    text-align: center;
-
+	background-color: #6B9AC4;
+	max-width: 540px;
+	height: 5px;
 #col1 
-    width 450px
+    width 40%
 
 #col2
-    width 450px
+    width 40%
 
 #bottomsection
   background #ECEBE4
@@ -315,8 +314,8 @@ header {
 
 	p {
 		padding: 0 20px;
-    color: black;
-    background-color:white;
+		background-color:white;
+		color #00343f
 	}
 
 	a {
@@ -332,22 +331,28 @@ header {
 }
 .timeline-item:nth-child(5) {
   .timeline-img-header {
-			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\anzLogo.png') center center no-repeat;
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\dxc_logo2.png') center center no-repeat;
 			background-size: contain;
 		}
 }
 .timeline-item:nth-child(8) {
   .timeline-img-header {
-			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\gocloudpng.png') center center no-repeat;
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\anzLogo.png') center center no-repeat;
 			background-size: contain;
 		}
 }
 .timeline-item:nth-child(11) {
   .timeline-img-header {
-			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\Otago2.png') center center no-repeat;
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\gocloudpng.png') center center no-repeat;
 			background-size: contain;
 		}
 }
+.timeline-item:nth-child(14) {
+  .timeline-img-header {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('src\assets\Images\Otago2.png') center center no-repeat;
+			background-size: contain;
+		}
+} 
 
 .timeline-img-header {
 
@@ -374,6 +379,7 @@ blockquote {
 	background: #1D3461;
 	display: inline-block;
 	color: #FFFFFF;
+    font-size: 18px;
 	padding: 10px;
 	position: absolute;
 	top: 0;
@@ -403,10 +409,39 @@ blockquote {
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 769px) 
+
+	#col1
+		width 80%
+		margin auto
+	#col2
+		width 80%
+		margin auto
+	#top
+		flex-direction column
+		width 100%
+	.intro
+		height 900px
+	.title
+		font-size 70px
+	.title2
+		font-size 50px
+	.breakLine
+		max-width 70%
+	.breakLine2
+		max-width 90%
+	#secondintro
+		padding-top 30px
+	
+	.timeline-img-header 
+		text-align center
+		h2
+			width 100%
+			margin-top 40px
+			left 0px
+			font-size 20px
 
 	.timeline {
-
 		&::before {
 			left: 50px;
 		}
@@ -423,18 +458,16 @@ blockquote {
 
 		.timeline-item {
 
-			&:nth-child(even) {
-
+			&:nth-child(odd) {
 				.timeline-content {
-					float: none;
-
+					float: left;
+					padding: 40px 30px 10px 30px;
 				}
 			}
-
-			&:nth-child(odd) {
-
+			&:nth-child(even) {
 				.timeline-content {
-					
+					float: left;
+					padding: 40px 30px 10px 30px;
 					&::after {
 						content: '';
 						position: absolute;
@@ -444,12 +477,19 @@ blockquote {
 						top: 30px;
 						left: -15px;
 						border-width: 10px 15px 10px 0;
-						border-color: transparent #f5f5f5 transparent transparent;
+						border-color: transparent #c5cae9 transparent transparent;
 					}
 				}
-
+				
 			}
+		}	
+		.timeline-item:nth-child(even) {
+  			transform: none;
+		}
+		.timeline-item:nth-child(odd) {
+			transform: none;
 		}
 	}
-	
-}
+		
+
+

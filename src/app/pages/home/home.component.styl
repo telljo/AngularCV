@@ -4,6 +4,7 @@
     margin auto
     background-color #008f95
     text-align center
+    width 100%
     min-height 100%
 
 .main
@@ -18,7 +19,8 @@ img
     border-radius 50%
     width 200px
     height 200px
-    margin-top 20px
+    margin-top 14px
+    margin-left 10px
 
   h1 
     margin-top 0
@@ -29,7 +31,7 @@ img
     font-weight: 300;
     font-size 120px
     margin: 0px;
-    color #28AFB0
+    color #acfcd9
 
 .name1
     font-family: 'deadjim', 'arial', sans-serif;
@@ -38,28 +40,37 @@ img
     font-weight: 300;
     font-size 120px
     margin: 0px;
+    color #28AFB0
+
+.name2
+    font-family: 'deadjim', 'arial', sans-serif;
+    font-style: normal;
+    letter-spacing: 5px
+    font-weight: 300;
+    font-size 60px
+    margin: 0px;
     color #2c3e50
+    margin-top 10px
+    margin-bottom 5px 
 
 .topsection
     display flex
-    padding 15px
     margin auto
     margin-top 20px
-    width 550px
+    width 100%
     flex-direction row
-    justify-content: space-evenly
+    justify-content: center
 
 section 
     margin-top 10px;
+    margin-right 10px
 
 .example_c
     width 160px
     margin-top 15px
     color #ACFCD9!important
-    font-family Andale Mono, monospace
-    font-style bold
-    text-transform uppercase
-    text-decoration none
+    font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";  
+    font-weight 700
     background #008f95
     padding 20px
     border 4px solid #ACFCD9 !important
@@ -86,8 +97,9 @@ section
 .button_cont span:after {
   content: '\00bb';
   position: absolute;
-  opacity: 0;
-  top: 0;
+  opacity: 1;
+  bottom: 0;
+  margin-bottom 2px
   right: -20px;
   transition: 0.5s;
 }
@@ -99,4 +111,17 @@ section
 .button_cont:hover span:after {
   opacity: 1;
   right: 0;
-}
+}  
+
+         
+@media (max-width: 769px)
+    
+    .name
+        font-size 70px
+    .name1
+        font-size 70px
+    .name2
+        font-size 40px
+    img
+        width 110px
+        height 110px    

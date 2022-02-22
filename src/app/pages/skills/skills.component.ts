@@ -30,7 +30,7 @@ export class SkillsComponent implements OnInit {
     
       // define variables
       //var item = document.querySelector(".portfolio");    
-      var items = [document.querySelector(".portfolio"), document.querySelector(".certificates")];
+      var items = [document.querySelector(".portfolio")];
       
       setTimeout(function () {
         

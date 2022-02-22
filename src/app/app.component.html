@@ -1,16 +1,33 @@
-<div id="wrapper">
-        <header>
-            <nav>
-                <a class="navLink" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
-                  true}">Home</a>
-                <a class="navLink" routerLink="/experience" routerLinkActive="active-link">Experience</a>
-                <a class="navLink" routerLink="/skills" routerLinkActive="active-link">Skills</a>
-                <a class="navLink" routerLink="/contact" routerLinkActive="active-link">Contact</a>
-              </nav>
-        </header>
-      
-      <router-outlet></router-outlet>
+<div (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')" style="height: 100%;">
 
+
+  <div id="wrapper">
+    <button (click)="toggleShow()" id="test" aria-label="Toggle navigation menu" class="fa fa-bars fa-2x">
+    </button>
+    <div [@slideInOut]="animationState" class="navigation_background">
+
+    <nav *ngIf="navShow" class="Navigation_mobile-nav">
+      <a (click)="toggleShow()" class="navLink_mobile" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+        true}">Home</a>
+      <a (click)="toggleShow()" class="navLink_mobile" routerLink="/experience" routerLinkActive="active-link">Experience</a>
+      <a (click)="toggleShow()" class="navLink_mobile" routerLink="/skills" routerLinkActive="active-link">Skills</a>
+      <a (click)="toggleShow()" class="navLink_mobile" routerLink="/contact" routerLinkActive="active-link">Contact</a>
+    </nav>
+
+    </div>
+          <header>
+              <nav>
+                  <a class="navLink" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+                    true}">Home</a>
+                  <a class="navLink" routerLink="/experience" routerLinkActive="active-link">Experience</a>
+                  <a class="navLink" routerLink="/skills" routerLinkActive="active-link">Skills</a>
+                  <a class="navLink" routerLink="/contact" routerLinkActive="active-link">Contact</a>
+                </nav>           
+          </header>
+        
+        <router-outlet></router-outlet>
+
+  </div>
 </div>
 
 
