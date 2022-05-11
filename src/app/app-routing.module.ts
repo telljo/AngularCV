@@ -8,10 +8,10 @@ import { ExperienceComponent } from './pages/experience/experience.component'
 
 
 const routes: Routes = [
-
   {
     path: '',
     component: PagesComponent,
+    
     children: [
       {
         path: '',
@@ -40,6 +40,8 @@ const routes: Routes = [
       }
     ]
   },
+  { path: '404', component: HomeComponent },
+  { path: '**', redirectTo: '404' },
   {
     path: '',
     redirectTo: '',

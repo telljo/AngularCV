@@ -1,6 +1,8 @@
 {
   "projects": {
-    "default": "angularcv-51d60",
-    "test": "joshtell-31116"
-  }
+    "default": "joshtell-31116",
+    "test": "joshtell-31116",
+    "prod": "joshtell-31116"
+  },
+  "targets": {}
 }
