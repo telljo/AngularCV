@@ -6,24 +6,24 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.styl'],
+  styleUrls: ['./app.component.scss'],
   animations: [NavAnimation]
 })
 export class AppComponent {
-  
+
   title = 'AngularCV';
   animationState = 'out';
   navShow = false;
 
   private swipeCoord?: [number, number];
   private swipeTime?: number;
-  private pages: Array<string> = ['', 'experience', 'skills', 'contact']; 
+  private pages: Array<string> = ['', 'experience', 'skills', 'contact'];
 
   constructor(private router: Router){
 
   }
 
-// Detects a swipe and navigates to the next page based on swipe direction   
+// Detects a swipe and navigates to the next page based on swipe direction
 swipe(e: TouchEvent, when: string): void {
   const coord: [number, number] = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
   const time = new Date().getTime();
@@ -54,7 +54,7 @@ swipe(e: TouchEvent, when: string): void {
       }
     }
   }
-  
+
   // Navigates to a page based on swipe direction and page number
   navigatePage(page: number, direction: string){
     if(direction==='next'){
