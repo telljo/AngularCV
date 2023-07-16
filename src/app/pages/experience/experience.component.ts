@@ -6,7 +6,7 @@ import { takeWhile, scan, tap } from "rxjs/operators";
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.styl']
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
 
@@ -32,23 +32,23 @@ export class ExperienceComponent implements OnInit {
     this.loadScript();
   }
 
-  public loadScript() {        
+  public loadScript() {
 
     (function() {
 
       'use strict';
-    
+
       // define variables
-      var items = document.querySelectorAll(".timeline-item");      
+      var items = document.querySelectorAll(".timeline-item");
       var cards = document.querySelectorAll(".timeline-img");
-      
+
       setTimeout(function () {
         for (var i = 0; i < cards.length; i++) {
           if (isElementInViewport(cards[i])) {
             items[i].classList.add("in-view");
           }
         }
-      }, 750); 
+      }, 750);
 
       // check if an element is in viewport
       function isElementInViewport(el) {
@@ -60,7 +60,7 @@ export class ExperienceComponent implements OnInit {
           rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
       }
-    
+
       function callbackFunc() {
         for (var i = 0; i < cards.length; i++) {
           if (isElementInViewport(cards[i])) {
@@ -71,7 +71,7 @@ export class ExperienceComponent implements OnInit {
       // listen for events
       window.addEventListener("resize", callbackFunc);
       window.addEventListener("scroll", callbackFunc);
-    
+
     })()
 
     }

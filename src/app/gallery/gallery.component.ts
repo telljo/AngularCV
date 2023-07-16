@@ -13,7 +13,7 @@ import {
 @Component({
   selector: 'pages-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.styl'],
+  styleUrls: ['./gallery.component.scss'],
   animations: [
     trigger('switchState', [
       state(
@@ -104,5 +104,5 @@ export class GalleryComponent implements OnInit {
       }
     },
       20);
-}  
+}
 }
